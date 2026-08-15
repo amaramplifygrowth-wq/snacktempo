@@ -1,0 +1,6 @@
+{
+  "name": "Tempo - Restaurant & Snack",
+  "description": "Site de commande en ligne et menu digital pour Tempo (Snack Tempo) - Spécialités italiennes, burgers, tacos, pasticcio, frisby et cuisine marocaine fait maison avec commande WhatsApp.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

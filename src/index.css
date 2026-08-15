@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    scroll-behavior: smooth;
+  }
+  
+  [dir="rtl"] {
+    font-family: 'Cairo', 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, .font-heading {
+    font-family: 'Outfit', 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+
+  [dir="rtl"] h1, 
+  [dir="rtl"] h2, 
+  [dir="rtl"] h3, 
+  [dir="rtl"] .font-heading {
+    font-family: 'Cairo', system-ui, sans-serif;
+  }
+}
+
+/* Custom hide scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Subtle warm background pattern for Italian-Moroccan warmth */
+.bg-warm-canvas {
+  background-color: #fbf9f5;
+  background-image: radial-gradient(#e7dec8 0.75px, transparent 0.75px), radial-gradient(#e7dec8 0.75px, #fbf9f5 0.75px);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+}
+
+.bg-wood-accent {
+  background-color: #2b221b;
+  background-image: radial-gradient(rgba(255,255,255,0.03) 1px, transparent 0);
+  background-size: 24px 24px;
+}

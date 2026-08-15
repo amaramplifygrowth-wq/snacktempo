@@ -1,0 +1,36 @@
+{
+  "entities": {
+    "menu_items": {
+      "title": "MenuItem",
+      "description": "Restaurant menu items, prices, descriptions and availability",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "categoryId": { "type": "string" },
+        "name": { "type": "object" },
+        "description": { "type": "object" },
+        "price": { "type": "number" },
+        "image": { "type": "string" },
+        "available": { "type": "boolean" },
+        "isPopular": { "type": "boolean" },
+        "isHomemade": { "type": "boolean" },
+        "isGratinable": { "type": "boolean" },
+        "isMoroccanTouch": { "type": "boolean" }
+      },
+      "required": ["id", "categoryId", "name", "price", "available"]
+    },
+    "restaurant_settings": {
+      "title": "RestaurantSettings",
+      "description": "General restaurant configuration including WhatsApp number, hours and fees",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "whatsappNumber": { "type": "string" },
+        "phoneNumber": { "type": "string" },
+        "takeawayFee": { "type": "number" },
+        "currency": { "type": "string" }
+      },
+      "required": ["name", "whatsappNumber", "takeawayFee"]
+    }
+  }
+}

@@ -1,0 +1,15 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Menu items: public read, write for menu management
+    match /menu_items/{itemId} {
+      allow read: if true;
+      allow write: if true;
+    }
+    // Restaurant settings: public read, write for management
+    match /restaurant_settings/{settingId} {
+      allow read: if true;
+      allow write: if true;
+    }
+  }
+}
