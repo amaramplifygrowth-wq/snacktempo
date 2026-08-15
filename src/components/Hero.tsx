@@ -53,10 +53,10 @@ export const Hero: React.FC<HeroProps> = ({
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
           {/* Text Content / Tagline */}
-          <div className="lg:col-span-6 flex flex-col items-start space-y-5 text-left rtl:text-right">
+          <div className="lg:col-span-6 flex flex-col items-center text-center space-y-5 mx-auto w-full">
             
             {/* Top Badge: Homemade & Delivery */}
-            <div className="inline-flex items-center gap-2 bg-[#2a1e16] border border-[#dc2626]/40 px-3.5 py-1.5 rounded-full text-xs font-bold text-amber-300 shadow-sm">
+            <div className="inline-flex items-center justify-center gap-2 bg-[#2a1e16] border border-[#dc2626]/40 px-3.5 py-1.5 rounded-full text-xs font-bold text-amber-300 shadow-sm mx-auto">
               <span className="flex h-2 w-2 relative">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-[#dc2626]"></span>
@@ -67,7 +67,7 @@ export const Hero: React.FC<HeroProps> = ({
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black font-heading tracking-tight leading-[1.08] text-white">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black font-heading tracking-tight leading-[1.08] text-white text-center">
               <span className="block text-[#fdfbf7]">{t.heroTagline.split(',')[0]}</span>
               <span className="text-[#22c55e] inline-block">
                 {t.heroTagline.split(',')[1] || config.tagline[lang]}
@@ -75,19 +75,19 @@ export const Hero: React.FC<HeroProps> = ({
             </h1>
 
             {/* Subtitle */}
-            <p className="text-neutral-300 text-sm sm:text-base md:text-lg max-w-xl leading-relaxed font-normal">
+            <p className="text-neutral-300 text-sm sm:text-base md:text-lg max-w-xl leading-relaxed font-normal text-center mx-auto">
               {t.heroSub}
             </p>
 
             {/* Feature Bullets */}
-            <div className="grid grid-cols-2 gap-2.5 sm:gap-3.5 w-full pt-1 text-xs sm:text-sm text-neutral-200">
-              <div className="flex items-center gap-2 bg-white/5 border border-white/10 px-3 py-2 rounded-xl">
+            <div className="grid grid-cols-2 gap-2.5 sm:gap-3.5 w-full max-w-md pt-1 text-xs sm:text-sm text-neutral-200 mx-auto">
+              <div className="flex items-center justify-center gap-2 bg-white/5 border border-white/10 px-3 py-2 rounded-xl text-center">
                 <Flame className="w-4 h-4 text-orange-400 shrink-0" />
                 <span className="font-semibold">
                   {lang === 'fr' ? 'Pizzas & Gratinages au four' : lang === 'ar' ? 'بيتزا وكراتيناج بالفرن' : 'Oven-Baked & Cheesy'}
                 </span>
               </div>
-              <div className="flex items-center gap-2 bg-white/5 border border-white/10 px-3 py-2 rounded-xl">
+              <div className="flex items-center justify-center gap-2 bg-white/5 border border-white/10 px-3 py-2 rounded-xl text-center">
                 <UtensilsCrossed className="w-4 h-4 text-emerald-400 shrink-0" />
                 <span className="font-semibold">
                   {lang === 'fr' ? '100% Frais & Fait Maison' : lang === 'ar' ? '100% طازج وصنع منزلي' : '100% Fresh & Homemade'}
@@ -96,11 +96,11 @@ export const Hero: React.FC<HeroProps> = ({
             </div>
 
             {/* Action Buttons: Primary Menu CTA + Secondary Question/Contact */}
-            <div className="flex flex-col sm:flex-row sm:items-center gap-3 pt-2.5 sm:pt-3 w-full sm:w-auto">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2.5 sm:pt-3 w-full">
               <button
                 id="hero-cta-menu-btn"
                 onClick={onScrollToMenu}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-[#15803d] hover:bg-[#166534] active:scale-95 text-white font-black text-sm sm:text-base px-8 py-3.5 sm:py-4 rounded-full shadow-xl shadow-green-950/60 transition-all cursor-pointer border-b-2 border-green-900 group"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-[#15803d] hover:bg-[#166534] active:scale-95 text-white font-black text-sm sm:text-base px-8 py-3.5 sm:py-4 rounded-full shadow-xl shadow-green-950/60 transition-all cursor-pointer border-b-2 border-green-900 group text-center"
               >
                 <span>{t.seeMenu}</span>
                 <ArrowDown className="w-4 h-4 transition-transform group-hover:translate-y-0.5 animate-bounce" />
@@ -117,7 +117,7 @@ export const Hero: React.FC<HeroProps> = ({
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-black/40 hover:bg-black/60 active:scale-95 text-neutral-200 hover:text-white font-bold text-xs sm:text-sm px-5 py-3 sm:py-3.5 rounded-full border border-white/20 hover:border-white/40 backdrop-blur-sm transition-all"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-black/40 hover:bg-black/60 active:scale-95 text-neutral-200 hover:text-white font-bold text-xs sm:text-sm px-5 py-3 sm:py-3.5 rounded-full border border-white/20 hover:border-white/40 backdrop-blur-sm transition-all text-center"
               >
                 <MessageCircle className="w-4 h-4 text-[#25D366] shrink-0" />
                 <span>
@@ -131,7 +131,7 @@ export const Hero: React.FC<HeroProps> = ({
             </div>
 
             {/* Quick Meta Info - Single calm compact line */}
-            <div className="inline-flex items-center gap-1.5 text-xs text-neutral-300/90 pt-1">
+            <div className="inline-flex items-center justify-center gap-1.5 text-xs text-neutral-300/90 pt-1 mx-auto text-center">
               <Clock className="w-3.5 h-3.5 text-amber-400/90 shrink-0" />
               <span className="font-medium">{config.openingHours[lang]}</span>
               <span className="text-neutral-500 mx-1">·</span>
