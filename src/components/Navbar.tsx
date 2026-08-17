@@ -1,9 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { 
   ShoppingBag, 
-  Search,
-  ChevronDown,
-  Check
+  ChevronDown, 
+  Check 
 } from 'lucide-react';
 import { TempoLogo } from './TempoLogo';
 import { Language, RestaurantConfig } from '../types';
@@ -15,8 +14,6 @@ interface NavbarProps {
   cartItemCount: number;
   cartTotal: number;
   onOpenCart: () => void;
-  searchQuery: string;
-  onSearchChange: (query: string) => void;
   config: RestaurantConfig;
 }
 
@@ -32,8 +29,6 @@ export const Navbar: React.FC<NavbarProps> = ({
   cartItemCount,
   cartTotal,
   onOpenCart,
-  searchQuery,
-  onSearchChange,
   config,
 }) => {
   const t = translations[lang];
@@ -71,8 +66,8 @@ export const Navbar: React.FC<NavbarProps> = ({
     <header className="sticky top-0 z-40 bg-[#fbf9f5]/95 backdrop-blur-md border-b border-[#e7dec8] transition-all shadow-xs">
       <div className="max-w-7xl mx-auto px-3.5 sm:px-4 lg:px-8">
         
-        {/* ROW 1: Logo (Left) | Language Switcher & Cart (Right) */}
-        <div className="flex items-center justify-between gap-3 sm:gap-4 py-2">
+        {/* Logo (Left) | Language Switcher & Cart (Right) */}
+        <div className="flex items-center justify-between gap-3 sm:gap-4 py-2.5 sm:py-3">
           
           {/* Left: Logo */}
           <div className="flex items-center shrink-0">
@@ -196,32 +191,6 @@ export const Navbar: React.FC<NavbarProps> = ({
             </button>
           </div>
 
-        </div>
-
-        {/* ROW 2: Compact Search Bar */}
-        <div className="pb-2 pt-0.5">
-          <div className="relative w-full">
-            <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-neutral-400">
-              <Search className="w-3.5 h-3.5" />
-            </div>
-            <input
-              id="navbar-search-input"
-              type="text"
-              value={searchQuery}
-              onChange={(e) => onSearchChange(e.target.value)}
-              placeholder={t.searchPlaceholder}
-              className="w-full bg-[#f2ecde] text-[#1c1917] pl-8 pr-8 py-1.5 text-xs rounded-full border border-[#ded5c2] focus:border-[#15803d] focus:bg-white focus:outline-hidden transition-all placeholder:text-neutral-500"
-            />
-            {searchQuery && (
-              <button
-                onClick={() => onSearchChange('')}
-                className="absolute inset-y-0 right-0 pr-3 flex items-center text-xs text-neutral-500 hover:text-neutral-800"
-                aria-label="Clear search"
-              >
-                ✕
-              </button>
-            )}
-          </div>
         </div>
 
       </div>

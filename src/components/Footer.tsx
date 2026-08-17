@@ -8,7 +8,8 @@ import {
   ShieldCheck, 
   ShoppingBag,
   Flame,
-  Heart
+  Heart,
+  Star
 } from 'lucide-react';
 import { TempoLogo } from './TempoLogo';
 import { Language, RestaurantConfig } from '../types';
@@ -53,7 +54,7 @@ export const Footer: React.FC<FooterProps> = ({ config, lang }) => {
               </span>
             </div>
 
-            <div className="pt-2 flex items-center gap-3">
+            <div className="pt-2 flex flex-wrap items-center gap-3">
               <a
                 href={config.mapsUrl}
                 target="_blank"
@@ -62,6 +63,16 @@ export const Footer: React.FC<FooterProps> = ({ config, lang }) => {
               >
                 <span>{t.findOnMaps}</span>
                 <ExternalLink className="w-3.5 h-3.5" />
+              </a>
+
+              <a
+                href="https://g.page/r/PLACEHOLDER/review"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 bg-[#241a13] hover:bg-[#2e2119] border border-amber-500/30 hover:border-amber-500/50 text-amber-300 hover:text-amber-200 text-xs font-semibold px-3.5 py-2 rounded-full transition-all"
+              >
+                <Star className="w-3.5 h-3.5 text-amber-400 fill-amber-400" />
+                <span>{t.leaveReview}</span>
               </a>
             </div>
           </div>

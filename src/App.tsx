@@ -263,8 +263,6 @@ export default function App() {
           cartItemCount={cartItemCount}
           cartTotal={cartTotal}
           onOpenCart={() => setIsCartOpen(true)}
-          searchQuery={searchQuery}
-          onSearchChange={setSearchQuery}
           config={config}
         />
 
@@ -300,6 +298,7 @@ export default function App() {
             menuItems={menuItems}
             activeCategoryId={activeCategoryId}
             searchQuery={searchQuery}
+            onSearchChange={setSearchQuery}
             onOpenCustomizer={(item) => setCustomizingItem(item)}
             lang={lang}
           />
